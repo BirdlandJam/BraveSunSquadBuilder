@@ -1,3 +1,9 @@
+/* Style for dark mode */
+body.dark-mode {
+    background-color: #181818;
+    color: #ffffff;
+}
+
 /* Style for the grid layout */
 .ship-grid {
     display: grid;
@@ -9,14 +15,15 @@
 
 /* Style for the ship item */
 .ship-item {
-    border: 1px solid #ddd;
+    border: 1px solid #555;
     padding: 10px;
-    background-color: #f9f9f9;
+    background-color: #333;
     cursor: pointer;
 }
 
 /* Style for each ship detail */
 .ship-item p {
+    color: #ffffff;
     display:block;
     margin: 0;
     padding: 2px 0;
