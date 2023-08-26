@@ -33,6 +33,9 @@ document.addEventListener("DOMContentLoaded", function () {
         fleetList.appendChild(fleetShip);
     
         updateTotalPoints();
+
+         // Display fleet ships with updated styling
+    displayFleetShips(selectedShips);
     }
     
 
@@ -113,5 +116,27 @@ document.addEventListener("DOMContentLoaded", function () {
                 shipList.appendChild(shipItem);
             });
         }
+
+        function displayFleetShips(ships) {
+            ships.forEach(ship => {
+                const fleetShip = document.createElement("li");
+                fleetShip.classList.add("fleet-item");  // Add a class for styling
+        
+                // Create elements for each fleet ship detail
+                const shipDetails = document.createElement("p");
+                shipDetails.textContent = `${ship.Name} (Class: ${ship.Class}, Ability: ${ship.Ability}, Cost: ${ship.Cost} points)`;
+        
+                fleetShip.appendChild(shipDetails);
+        
+                fleetShip.dataset.shipName = ship.Name;
+        
+                fleetShip.addEventListener("click", () => {
+                    removeShipFromFleet(ship);
+                });
+        
+                fleetList.appendChild(fleetShip);
+            });
+        }
+        
         
 });
