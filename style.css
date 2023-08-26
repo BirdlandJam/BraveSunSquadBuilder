@@ -17,6 +17,7 @@
 
 /* Style for each ship detail */
 .ship-item p {
+    display:block;
     margin: 0;
     padding: 2px 0;
 }
