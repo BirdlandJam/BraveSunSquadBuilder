@@ -1,0 +1,15 @@
+/* Style for the grid layout */
+.ship-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Style for each ship item */
+.ship-grid li {
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
