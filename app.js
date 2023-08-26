@@ -73,15 +73,37 @@ document.addEventListener("DOMContentLoaded", function () {
             console.error('Error loading CSV:', error);
         });
 
-    function displayAvailableShips(ships) {
-        ships.forEach(ship => {
-            const shipItem = document.createElement("li");
-            shipItem.textContent = `${ship.Name} (Class: ${ship.Class}, Ability: ${ship.Ability}, Cost: ${ship.Cost} points)`;
-
-            shipItem.addEventListener("click", () => {
-                addShipToFleet(ship);
+        function displayAvailableShips(ships) {
+            ships.forEach(ship => {
+                const shipItem = document.createElement("li");
+                shipItem.classList.add("ship-item");  // Add a class for styling
+        
+                // Create elements for each ship detail
+                const shipName = document.createElement("p");
+                shipName.textContent = `Ship: ${ship.Name}`;
+        
+                const shipClass = document.createElement("p");
+                shipClass.textContent = `Class: ${ship.Class}`;
+        
+                const shipAbility = document.createElement("p");
+                shipAbility.textContent = `Ability: ${ship.Ability}`;
+        
+                const shipCost = document.createElement("p");
+                shipCost.textContent = `Cost: ${ship.Cost} points`;
+        
+                // Append ship details to ship item
+                shipItem.appendChild(shipName);
+                shipItem.appendChild(shipClass);
+                shipItem.appendChild(shipAbility);
+                shipItem.appendChild(shipCost);
+        
+                // Add a click event listener to add ship to fleet
+                shipItem.addEventListener("click", () => {
+                    addShipToFleet(ship);
+                });
+        
+                shipList.appendChild(shipItem);
             });
-            shipList.appendChild(shipItem);
-        });
-    }
+        }
+        
 });
