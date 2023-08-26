@@ -7,9 +7,16 @@
     padding: 0;
 }
 
-/* Style for each ship item */
-.ship-grid li {
+/* Style for the ship item */
+.ship-item {
     border: 1px solid #ddd;
     padding: 10px;
     background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+/* Style for each ship detail */
+.ship-item p {
+    margin: 0;
+    padding: 2px 0;
 }
