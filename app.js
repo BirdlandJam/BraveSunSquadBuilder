@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded"), function () {
     const shipList = document.getElementById("shipList");
     const fleetList = document.getElementById("fleetList");
     const totalPointsElement = document.getElementById("totalPoints");
@@ -16,29 +16,12 @@ document.addEventListener("DOMContentLoaded", function () {
         const cost = parseFloat(ship.Cost) || 0;
         totalPoints += cost;
     
-        const fleetShip = document.createElement("li");
-        fleetShip.classList.add("fleet-item");  // Add a class for styling
-    
-        // Create a paragraph element for ship details
-        const shipDetails = document.createElement("p");
-        shipDetails.textContent = `${ship.Name} (Class: ${ship.Class}, Ability: ${ship.Ability}, Cost: ${cost} points)`;
-    
-        fleetShip.appendChild(shipDetails);
-    
-        fleetShip.dataset.shipName = ship.Name;
-    
-        fleetShip.addEventListener("click", () => {
-            removeShipFromFleet(ship);
-        });
+        const fleetShip = createShipElement(ship, "fleet-item");
         fleetList.appendChild(fleetShip);
     
         updateTotalPoints();
-
-         // Display fleet ships with updated styling
-    displayFleetShips(selectedShips);
     }
     
-
     function removeShipFromFleet(ship) {
         const index = selectedShips.indexOf(ship);
         if (index !== -1) {
@@ -49,8 +32,23 @@ document.addEventListener("DOMContentLoaded", function () {
             if (fleetItemToRemove) {
                 fleetList.removeChild(fleetItemToRemove);
                 updateTotalPoints();
+
+                console.log(`Removed ship: ${ship.Name}`); //log the removal of a ship
             }
         }
+    }
+
+    function createShipElement(ship, className) {
+        const shipItem = document.createElement("li");
+        shipItem.classList.add(className);
+
+        const shipDetails = document.createElement("p");
+        shipDetails.textContent = `${ship.Name} (Class: ${ship.Class}, Ability: ${ship.Ability}, Cost: ${ship.Cost} points)`;
+
+        shipItem.appendChild(shipDetails);
+        shipItem.dataset.shipName = ship.Name;
+
+        return shipItem;
     }
 
     function parseCSV(csv) {
@@ -73,83 +71,81 @@ document.addEventListener("DOMContentLoaded", function () {
         return ships;
     }
 
-    // Fetch the CSV file automatically from the same directory
-    fetch("./ships.csv") // Replace 'ships.csv' with your CSV file name
+    fetch("ships.csv") // Replace 'ships.csv' with your CSV file name
         .then(response => response.text())
         .then(data => {
             const ships = parseCSV(data);
-            displayAvailableShips(ships);
+            displayAvailableShips(ships); // Display available ships here
         })
         .catch(error => {
             console.error('Error loading CSV:', error);
         });
 
-        function displayAvailableShips(ships) {
-            ships.forEach(ship => {
-                const shipItem = document.createElement("li");
-                shipItem.classList.add("ship-item");  // Add a class for styling
+    function displayAvailableShips(ships) {
+        ships.forEach(ship => {
+            const shipItem = document.createElement("li");
+            shipItem.classList.add("ship-item");  // Add a class for styling
         
-                // Create elements for each ship detail
-                const shipName = document.createElement("p");
-                shipName.textContent = `Ship: ${ship.Name}`;
+            const shipName = document.createElement("p");
+            shipName.textContent = `Ship: ${ship.Name}`;
         
-                const shipClass = document.createElement("p");
-                shipClass.textContent = `Class: ${ship.Class}`;
+            const shipClass = document.createElement("p");
+            shipClass.textContent = `Class: ${ship.Class}`;
         
-                const shipAbility = document.createElement("p");
-                shipAbility.textContent = `Ability: ${ship.Ability}`;
+            const shipAbility = document.createElement("p");
+            shipAbility.textContent = `Ability: ${ship.Ability}`;
         
-                const shipCost = document.createElement("p");
-                shipCost.textContent = `Cost: ${ship.Cost} points`;
+            const shipCost = document.createElement("p");
+            shipCost.textContent = `Cost: ${ship.Cost} points`;
         
-                // Append ship details to ship item
-                shipItem.appendChild(shipName);
-                shipItem.appendChild(shipClass);
-                shipItem.appendChild(shipAbility);
-                shipItem.appendChild(shipCost);
+            shipItem.appendChild(shipName);
+            shipItem.appendChild(shipClass);
+            shipItem.appendChild(shipAbility);
+            shipItem.appendChild(shipCost);
         
-                // Add a click event listener to add ship to fleet
-                shipItem.addEventListener("click", () => {
-                    addShipToFleet(ship);
-                });
-        
-                shipList.appendChild(shipItem);
-            });
-        }
+            shipList.appendChild(shipItem);
+        });
 
-        function displayFleetShips(ships) {
+        /* function displayFleetShips(ships) {
             ships.forEach(ship => {
                 const fleetShip = document.createElement("li");
                 fleetShip.classList.add("fleet-item");  // Add a class for styling
-        
+
                 // Create elements for each fleet ship detail
                 const shipName = document.createElement("p");
                 shipName.textContent = `Ship: ${ship.Name}`;
-        
+
                 const shipClass = document.createElement("p");
                 shipClass.textContent = `Class: ${ship.Class}`;
-        
+
                 const shipAbility = document.createElement("p");
                 shipAbility.textContent = `Ability: ${ship.Ability}`;
-        
+
                 const shipCost = document.createElement("p");
                 shipCost.textContent = `Cost: ${ship.Cost} points`;
-        
+
                 // Append ship details to fleet ship item
                 fleetShip.appendChild(shipName);
                 fleetShip.appendChild(shipClass);
                 fleetShip.appendChild(shipAbility);
                 fleetShip.appendChild(shipCost);
-        
+
                 // Add a click event listener to remove ship from fleet
                 fleetShip.addEventListener("click", () => {
                     removeShipFromFleet(ship);
                 });
-        
+
                 fleetList.appendChild(fleetShip);
-            });
-        }
-        
-        
-        
-});
+            }); */
+
+        shipList.addEventListener("click", (event) => {
+            const shipItem = event.target.closest(".ship-item");
+            if (shipItem) {
+                const shipIndex = Array.from(shipList.children).indexOf(shipItem);
+                const ship = ships[shipIndex];
+                addShipToFleet(ship);
+            }
+        });
+    }
+};
+
