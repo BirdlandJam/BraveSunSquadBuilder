@@ -123,13 +123,25 @@ document.addEventListener("DOMContentLoaded", function () {
                 fleetShip.classList.add("fleet-item");  // Add a class for styling
         
                 // Create elements for each fleet ship detail
-                const shipDetails = document.createElement("p");
-                shipDetails.textContent = `${ship.Name} (Class: ${ship.Class}, Ability: ${ship.Ability}, Cost: ${ship.Cost} points)`;
+                const shipName = document.createElement("p");
+                shipName.textContent = `Ship: ${ship.Name}`;
         
-                fleetShip.appendChild(shipDetails);
+                const shipClass = document.createElement("p");
+                shipClass.textContent = `Class: ${ship.Class}`;
         
-                fleetShip.dataset.shipName = ship.Name;
+                const shipAbility = document.createElement("p");
+                shipAbility.textContent = `Ability: ${ship.Ability}`;
         
+                const shipCost = document.createElement("p");
+                shipCost.textContent = `Cost: ${ship.Cost} points`;
+        
+                // Append ship details to fleet ship item
+                fleetShip.appendChild(shipName);
+                fleetShip.appendChild(shipClass);
+                fleetShip.appendChild(shipAbility);
+                fleetShip.appendChild(shipCost);
+        
+                // Add a click event listener to remove ship from fleet
                 fleetShip.addEventListener("click", () => {
                     removeShipFromFleet(ship);
                 });
@@ -137,6 +149,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 fleetList.appendChild(fleetShip);
             });
         }
+        
         
         
 });
