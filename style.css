@@ -39,8 +39,8 @@ body.dark-mode {
 
 /* Style for each fleet detail paragraph (same as ship-item p) */
 .fleet-item p {
-    color: #ffffff;
     display: block;
+    color: #ffffff;
     margin: 0;
     padding: 2px 0;
 }
