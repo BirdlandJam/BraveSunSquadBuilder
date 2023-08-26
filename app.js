@@ -12,21 +12,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function addShipToFleet(ship) {
         selectedShips.push(ship);
-
+    
         const cost = parseFloat(ship.Cost) || 0;
         totalPoints += cost;
-
+    
         const fleetShip = document.createElement("li");
-        fleetShip.textContent = `${ship.Name} (Class: ${ship.Class}, Ability: ${ship.Ability}, Cost: ${cost} points)`;
+        fleetShip.classList.add("fleet-item");  // Add a class for styling
+    
+        // Create a paragraph element for ship details
+        const shipDetails = document.createElement("p");
+        shipDetails.textContent = `${ship.Name} (Class: ${ship.Class}, Ability: ${ship.Ability}, Cost: ${cost} points)`;
+    
+        fleetShip.appendChild(shipDetails);
+    
         fleetShip.dataset.shipName = ship.Name;
-
+    
         fleetShip.addEventListener("click", () => {
             removeShipFromFleet(ship);
         });
         fleetList.appendChild(fleetShip);
-
+    
         updateTotalPoints();
     }
+    
 
     function removeShipFromFleet(ship) {
         const index = selectedShips.indexOf(ship);

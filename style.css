@@ -28,3 +28,19 @@ body.dark-mode {
     margin: 0;
     padding: 2px 0;
 }
+
+/* Style for the fleet item (same as ship-item) */
+.fleet-item {
+    border: 1px solid #555;
+    padding: 10px;
+    background-color: #333;
+    cursor: pointer;
+}
+
+/* Style for each fleet detail paragraph (same as ship-item p) */
+.fleet-item p {
+    color: #ffffff;
+    display: block;
+    margin: 0;
+    padding: 2px 0;
+}
