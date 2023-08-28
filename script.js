@@ -14,6 +14,7 @@ function updateTotalPoints(cost, isAdding) {
 }
 
 // Fetch CSV and Populate Available Ships
+console.log("Fetch initiated");
 fetch('ships.csv')
   .then(response => response.text())
   .then(csvContent => {
