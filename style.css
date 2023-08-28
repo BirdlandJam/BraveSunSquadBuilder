@@ -1,46 +1,19 @@
-/* Style for dark mode */
-body.dark-mode {
-    background-color: #181818;
-    color: #ffffff;
+body {
+  font-family: Arial, sans-serif;
 }
 
-/* Style for the grid layout */
-.ship-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-    list-style-type: none;
-    padding: 0;
+#availableShips, #fleet {
+  margin-bottom: 20px;
 }
 
-/* Style for the ship item */
-.ship-item {
-    border: 1px solid #555;
-    padding: 10px;
-    background-color: #333;
-    cursor: pointer;
+.ship-box {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 5px;
+  display: inline-block;
+  width: 150px;
 }
 
-/* Style for each ship detail */
-.ship-item p {
-    color: #ffffff;
-    display:block;
-    margin: 0;
-    padding: 2px 0;
-}
-
-/* Style for the fleet item (same as ship-item) */
-.fleet-item {
-    border: 1px solid #555;
-    padding: 10px;
-    background-color: #333;
-    cursor: pointer;
-}
-
-/* Style for each fleet detail paragraph (same as ship-item p) */
-.fleet-item p {
-    display: block;
-    color: #ffffff;
-    margin: 0;
-    padding: 2px 0;
+#fleet .ship-box {
+  background-color: #f5f5f5;
 }
