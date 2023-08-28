@@ -17,6 +17,7 @@ function updateTotalPoints(cost, isAdding) {
 fetch('ships.csv')
   .then(response => response.text())
   .then(csvContent => {
+    console.log(csvContent);
     const availableShips = document.getElementById('availableShips');
     const fleet = document.getElementById('fleet');
 
