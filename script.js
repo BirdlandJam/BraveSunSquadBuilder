@@ -3,8 +3,8 @@ let totalPoints = 0;
 
 // Parse the CSV into an array of ship objects
 function csvToArray(csv) {
-  csv = csv.trim();  // Add this line to trim the csv content
-  const [header, ...rows] = csv.split('\n').map(row => row.split(','));
+  csv = csv.trim();
+  const [header, ...rows] = csv.split('\n').map(row => row.trim().split(',').map(cell => cell.trim()));
   return rows.map(row => Object.fromEntries(row.map((value, i) => [header[i], value])));
 }
 
