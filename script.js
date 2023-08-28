@@ -15,7 +15,7 @@ function updateTotalPoints(cost, isAdding) {
 
 // Fetch CSV and Populate Available Ships
 console.log("Fetch initiated");
-fetch('ships.csv')
+fetch('https://birdlandjam.github.io/BraveSunSquadBuilder/ships.csv')
   .then(response => response.text())
   .then(csvContent => {
     console.log(csvContent);
