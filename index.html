@@ -1,29 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Board Game Fleet Manager</title>
-    <link rel="stylesheet" href="style.css">
+  <title>Board Game Fleet Builder</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<body class="dark-mode">
-    <h1>Board Game Fleet Manager</h1>
+<body>
 
-    <h2>Available Ships:</h2>
-    <ul id="shipList" class="ship-grid">
-        <!-- Ships will be added here dynamically -->
-    </ul>
+<h1>Board Game Fleet Builder</h1>
 
-    <!-- <input type="file" id="shipDataFile" accept=".csv"> -->
+<div id="availableShips">
+  <h2>Available Ships</h2>
+  <!-- Ships will be loaded here from the CSV -->
+</div>
 
-    <h2>Your Fleet:</h2>
-    <ul id="fleetList" class="ship-grid">
-        <!-- Selected ships will be displayed here dynamically -->
-    </ul>
+<div id="fleet">
+  <h2>Your Fleet</h2>
+  <p>Total Points: <span id="totalPoints">0</span></p>
+  <!-- Selected ships will appear here -->
+</div>
 
-    <h2>Total Points:</h2>
-    <div id="totalPoints">0</div>
-
-    <script src="app.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
