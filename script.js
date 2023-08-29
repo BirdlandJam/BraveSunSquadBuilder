@@ -24,7 +24,8 @@ fetch('https://birdlandjam.github.io/BraveSunSquadBuilder/ships.csv')
     const fleet = document.getElementById('fleet');
 
     const ships = csvToArray(csvContent);
-
+    console.log(ships)
+    
     // Populate available ships
     ships.forEach(ship => {
       const shipBox = document.createElement('div');
