@@ -30,6 +30,7 @@ fetch('https://birdlandjam.github.io/BraveSunSquadBuilder/ships.csv')
       const shipBox = document.createElement('div');
       shipBox.className = 'ship-box';
       shipBox.innerHTML = `
+        <p><strong>Ship Number:</strong> ${ship.ShipNumber}</p>
         <p><strong>Ship:</strong> ${ship.Name}</p>
         <p><strong>Class:</strong> ${ship.Class}</p>
         <p><strong>Ability:</strong> ${ship.Ability}</p>
