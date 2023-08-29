@@ -1,4 +1,4 @@
-Ship Number,Name,Class,Ability,Cost
+ShipNumber,Name,Class,Ability,Cost
 0,Rogue,Frigate,Barrel Roll,9
 1,Striker,Frigate,None,12
 2,Beetle,Frigate,None,12
