@@ -1,4 +1,46 @@
-Name,Class,Ability,Cost
-Striker,Frigate,None,12
-Rainmaker,Cruiser,None,20
-Ironclad,Fighter,None,6
+Ship Number,Name,Class,Ability,Cost
+0,Rogue,Frigate,Barrel Roll,9
+1,Striker,Frigate,None,12
+2,Beetle,Frigate,None,12
+3,Ironclad,Fighter,None,6
+4,Sword,Frigate,None,12
+5,Rainmaker,Cruiser,Frigate Adv. | Cruiser Adv.,20
+6,Phase,Frigate,Cloak,8
+7,Thorn,Fighter,None,4
+8,FTL Pod,Fighter,None,3
+9,Slingshot,Cruiser,None,18
+10,Ravager,Frigate,Frigate Adv. | Mine Drop,14
+11,Raider,Fighter,None,5
+12,Damascus,Frigate,None,10
+13,Hunter,Frigate,Fighter Adv.,10
+14,Cutlass,Frigate,Boost,9
+15,Bane,Frigate,Corrosion,15
+16,Shield,Frigate,Immunity,12
+17,Shatter,Fighter,Long-Range | Cruiser Adv.,8
+18,Heatwave,Cruiser,None,18
+19,Hammerhead,Cruiser,Stun,16
+20,Recurve,Frigate,None,12
+21,Reversal,Frigate,None,10
+22,Aftershock,Frigate,Stun,7
+23,Shroud,Fighter,Cloak,6
+24,Dusk,Cruiser,Cloak,19
+25,Marauder,Cruiser,None,22
+26,Barrage,Cruiser,None,23
+27,Fury,Frigate,Multi-Fire,15
+28,Salem,Dreadnought,Multi-Fire,52
+29,Javelin,Cruiser,Boost,18
+30,Arrow,Frigate,Boost,12
+31,Dart,Fighter,Boost,6
+32,Harpoon,Dreadnought,Boost | Fighter Adv. | Multi-Fire,56
+33,Vulcan,Fighter,Mine Drop,4
+34a,Wolf A,Frigate,None,5
+34b,Wolf B,Frigate,None,3
+35,Emissary,Cruiser,Carrier (3-2),20
+36,Disintegrator,Frigate,Corrosion,11
+37,Rake,Frigate,Frigate Adv. | Immunity,17
+38,Caster,Fighter,Frigate Adv.,6
+39,Firebird,Frigate,Frigate Adv. | Cruiser Adv.,11
+40,Warlock,Frigate,Shield Project,10
+41,Magus,Cruiser,Shield Project,14
+42,Vandal,Fighter,Mine Drop,4
+43,Decimator,Dreadnought,Long-Range | Cruiser Adv.,34
