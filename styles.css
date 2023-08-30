@@ -21,6 +21,14 @@ h1, h2 {
   margin-bottom: 20px;
 }
 
+#fleet {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
 .ship-box {
   border: 1px solid #ccc;
   padding: 10px;
