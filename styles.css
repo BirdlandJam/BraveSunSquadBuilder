@@ -54,6 +54,11 @@ button:hover {
   background-color: #0056b3;
 }
 
+.ship-box button {
+  display: block;
+  margin: auto;
+}
+
 #fleet .ship-box {
   background-color: #e6f7ff;
 }
