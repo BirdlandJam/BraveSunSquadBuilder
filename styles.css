@@ -16,6 +16,12 @@ h1, h2 {
   margin-bottom: 20px;
 }
 
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
 .ship-box {
   border: 1px solid #ccc;
   padding: 10px;
