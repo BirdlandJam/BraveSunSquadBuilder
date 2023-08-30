@@ -25,7 +25,7 @@ h1, h2 {
 #fleet {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   flex-direction: row;
   margin-bottom: 20px;
 }
