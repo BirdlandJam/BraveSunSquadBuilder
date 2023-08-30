@@ -13,7 +13,7 @@ h1, h2 {
   text-align: center;
 }
 
-#availableShips, #fleet {
+#availableShips {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -87,6 +87,6 @@ button:hover {
   overflow: hidden;
   background-color: #f1f1f1;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
