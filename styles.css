@@ -12,6 +12,7 @@ h1, h2 {
 #availableShips, #fleet {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   margin-bottom: 20px;
 }
