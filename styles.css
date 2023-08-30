@@ -36,6 +36,7 @@ button {
   color: white;
   padding: 8px 16px;
   margin-top: 10px;
+  margin-left: 30%;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -53,7 +54,7 @@ button:hover {
   background-color: #777;
   color: white;
   cursor: pointer;
-  width: 100%;
+  width: 40%;
   border: none;
   text-align: left;
   outline: none;
