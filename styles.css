@@ -29,6 +29,12 @@ h1, h2 {
   margin-bottom: 20px;
 }
 
+#fleet-header {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+}
+
 .ship-box {
   border: 1px solid #ccc;
   padding: 10px;
