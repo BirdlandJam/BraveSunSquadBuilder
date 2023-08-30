@@ -17,12 +17,6 @@ h1, h2 {
   margin-bottom: 20px;
 }
 
-.content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
-
 .ship-box {
   border: 1px solid #ccc;
   padding: 10px;
@@ -64,10 +58,10 @@ button:hover {
 
 .content {
   padding: 0 18px;
-  display: none;
+  display: none;  /* This will ensure it's hidden initially */
   overflow: hidden;
   background-color: #f1f1f1;
-  display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
 }
+
