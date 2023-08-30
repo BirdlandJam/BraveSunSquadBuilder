@@ -67,4 +67,7 @@ button:hover {
   display: none;
   overflow: hidden;
   background-color: #f1f1f1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
