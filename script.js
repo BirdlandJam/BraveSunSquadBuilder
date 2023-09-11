@@ -2,7 +2,7 @@
 const abilityTooltips = {
   "Barrel Roll": "When using the Move action may maintain the current orientaiton of the ship. Rather than line the rear guides of the ship to the maneuver track maintain the orientation of the ship and touch the outside edge of the ship base to the maneuver track.",
   "Frigate Adv. | Cruiser Adv.": "Provides advantages to both Frigates and Cruisers in the fleet",
-  "Cloak": "Action Point Cost: 1 /nWhen attacked a ship with a cloak token gains 2 additional defence dice (up to a max of 4). If an attack against a cloaked ship deals no damage the cloak token is not removed." 
+  "Cloak": "Action Point Cost: 1 \nWhen attacked a ship with a cloak token gains 2 additional defence dice (up to a max of 4). If an attack against a cloaked ship deals no damage the cloak token is not removed." 
   // Add more abilities and their descriptions here
 };
 
