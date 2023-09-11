@@ -124,3 +124,20 @@ button:hover {
   visibility: visible;
   opacity: 1;
 }
+
+.info-icon {
+  cursor: help;
+  display: inline;
+}
+
+/* On mobile screens, show the tooltip on tap */
+@media (hover: none) {
+  .ability-tooltip {
+    /* You may want to tweak these styles for better visibility on mobile */
+  }
+
+  .info-icon:active .ability-tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+}
