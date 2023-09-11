@@ -1,3 +1,10 @@
+// Ability tool tip definitions. "Ability Title": "Ability definition"
+const abilityTooltips = {
+  "Barrel Roll": "Can execute a barrel roll maneuver once per round",
+  "Frigate Adv. | Cruiser Adv.": "Provides advantages to both Frigates and Cruisers in the fleet"
+  // Add more abilities and their descriptions here
+};
+
 // Initialize totalPoints to 0
 let totalPoints = 0;
 
@@ -52,7 +59,7 @@ fetch('https://birdlandjam.github.io/BraveSunSquadBuilder/ships.csv')
           <p><strong>#</strong> ${ship.ShipNumber}</p>
           <p><strong>Ship:</strong> ${ship.Name}</p>
           <p><strong>Class:</strong> ${ship.Class}</p>
-          <p><strong>Ability:</strong> ${ship.Ability}</p>
+          <p><strong>Ability:</strong> <span class="ability" title="${abilityTooltips[ship.Ability] || 'No additional info'}">${ship.Ability}</span></p>
           <p><strong>Cost:</strong> ${ship.Cost}</p>
           <button>Add to Fleet</button>
         `;
