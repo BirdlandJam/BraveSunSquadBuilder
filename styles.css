@@ -104,7 +104,7 @@ button:hover {
 
 .ability-tooltip {
   visibility: hidden;
-  width: 200px;
+  width: 300px;
   background-color: black;
   color: #fff;
   text-align: center;
