@@ -61,8 +61,14 @@ fetch('https://birdlandjam.github.io/BraveSunSquadBuilder/ships.csv')
           <p><strong>Ship:</strong> ${ship.Name}</p>
           <p><strong>Class:</strong> ${ship.Class}</p>
           <span class="ability">
-           <p><strong>Ability:</strong> ${ship.Ability} 
+           <p><strong>Ability:</strong> 
+      <span class="ability">
+          ${ship.Ability} 
+          <span class="info-icon"> (i)
             <span class="ability-tooltip">${abilityTooltips[ship.Ability] || 'No additional info'}</span>
+          </span>
+      </span>
+  </p>
         </span>
           <p><strong>Cost:</strong> ${ship.Cost}</p>
           <button>Add to Fleet</button>
